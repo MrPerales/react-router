@@ -15,14 +15,14 @@ function Menu() {
 
                 {/*with NavLink  */}
                 {routes.map(item => (
-                    <li>
+                            
+                    <li key={item.to}>
 
                         <NavLink
                             style={({ isActive }) => ({
                                 color: isActive ? 'red' : 'blue',
                             })}
                             to={item.to}
-                            key={item.text}
                         >
                             {item.text}
                         </NavLink>
