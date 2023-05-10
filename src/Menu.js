@@ -6,12 +6,15 @@ function Menu() {
         <nav>
             <ul>
                 {/* with link */}
-                {/* <li>
-                    <Link to='/'>Home</Link>
-                </li> */}
+                {/* {routes.map((item) => (
+                    <li>
+                        <Link to={`/${item.to}`}>{item.text}</Link>
+                    </li>
+
+                ))} */}
 
                 {/*with NavLink  */}
-                {routes.map(item =>
+                {routes.map(item => (
                     <li>
 
                         <NavLink
@@ -25,7 +28,7 @@ function Menu() {
                         </NavLink>
 
                     </li>
-                )}
+                ))}
 
             </ul>
         </nav>
