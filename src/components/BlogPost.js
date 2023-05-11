@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { blogData } from "./BlogData";
+import { blogData } from "../data/BlogData";
 
 function BlogPost() {
 

@@ -1,11 +1,11 @@
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css';
-import { HomePage } from './HomePage';
-import { BlogPage } from './BlogPage';
-import { ProfilePage } from './ProfilePage';
-import { NotFoundPage } from './NotFoundPage';
-import { Menu } from './Menu';
-import { BlogPost } from './BlogPost';
+import { HomePage } from './pages/HomePage';
+import { BlogPage } from './pages/BlogPage';
+import { ProfilePage } from './pages/ProfilePage';
+import { NotFoundPage } from './pages/NotFoundPage';
+import { Menu } from './components/Menu';
+import { BlogPost } from './components/BlogPost';
 
 //  /#/ -> principal page
 //  /#/blog -> BlogPage
