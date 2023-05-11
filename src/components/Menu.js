@@ -49,6 +49,13 @@ routes.push({
     to: '/profile',
     text: 'profile'
 })
-
+routes.push({
+    to: '/login',
+    text: 'login'
+})
+routes.push({
+    to: '/logout',
+    text: 'logout'
+})
 
 export { Menu }

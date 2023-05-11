@@ -1,9 +1,15 @@
-import React from "react";  
+import React from "react";
+import { useAuth } from "../auth";
 
-function ProfilePage(){
-    return(
-        <h1>ProfilePage</h1>
+function ProfilePage() {
+    const auth = useAuth();
+
+    return (
+        <>
+            <h1>welcome,{auth.user.userName}</h1>
+
+        </>
     );
 }
 
-export {ProfilePage}
+export { ProfilePage }
