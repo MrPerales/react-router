@@ -6,7 +6,9 @@ function ProfilePage() {
 
     return (
         <>
-            <h1>welcome,{auth.user.userName}</h1>
+            <h1>Profile</h1>
+            <p>welcome,{auth.user.userName}</p>
+            {console.log(auth.user,'user')}
 
         </>
     );

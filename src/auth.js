@@ -8,7 +8,7 @@ function AuthProvider({children}){
     const [user,setUser]=React.useState(null)
     const navigate=useNavigate();
     
-    const login=(userName)=>{
+    const login=({userName})=>{
         setUser({userName})
         navigate('/profile')
     }
@@ -17,7 +17,7 @@ function AuthProvider({children}){
         navigate('/')
 
     }
-
+    //objeto que tenga la info del usuario metodos y propiedades que se necesiten para la autentifificacion 
     const auth={user,login,logout};
 
     return (
@@ -28,6 +28,9 @@ function AuthProvider({children}){
         </AuthContext.Provider>
     );
 }
+
+//funcion para consumir authContext para que podamos exportar useAuth y no tengamos que importar
+//   useContext y el authContext
 function useAuth(){
    const auth=React.useContext(AuthContext);
    return auth

@@ -17,9 +17,7 @@ function LoginPage(){
                 <label>Write your User Name</label>
                 <input 
                     value={userName}
-                    onChange={(event)=>{
-                        setUserName(event.target.value)
-                    }}
+                    onChange={(event)=>setUserName(event.target.value)}
                 />
                 <button type="submit">Enter</button>
             </form>

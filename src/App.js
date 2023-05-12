@@ -33,9 +33,9 @@ function App() {
               <Route path=':slug' element={<BlogPost />} />
             </Route>
 
-            <Route path='/profile' element={<ProfilePage />} />
             <Route path='/login' element={<LoginPage />} />
             <Route path='/logout' element={<Logout />} />
+            <Route path='/profile' element={<ProfilePage />} />
 
             <Route path='*' element={<NotFoundPage />} />
 
