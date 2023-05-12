@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 const AuthContext=React.createContext();
@@ -35,11 +35,18 @@ function useAuth(){
    const auth=React.useContext(AuthContext);
    return auth
 }
-
-
+// proteger rutas para que no entren desde la url 
+function ProtectRoute(props){
+    const auth=useAuth();
+    if(!auth.user){
+        return <Navigate to='/login'/>
+    }
+    return props.children;
+}
 
 
 export{
     AuthProvider,
-    useAuth
+    useAuth,
+    ProtectRoute
 };

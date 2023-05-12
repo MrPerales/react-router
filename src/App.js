@@ -8,7 +8,7 @@ import { Menu } from './components/Menu';
 import { BlogPost } from './components/BlogPost';
 import { LoginPage } from './pages/LoginPage';
 import { Logout } from './pages/Logout';
-import { AuthProvider, useAuth } from './auth'
+import { AuthProvider, ProtectRoute } from './auth'
 //  /#/ -> principal page
 //  /#/blog -> BlogPage
 // .....
@@ -34,8 +34,24 @@ function App() {
             </Route>
 
             <Route path='/login' element={<LoginPage />} />
-            <Route path='/logout' element={<Logout />} />
-            <Route path='/profile' element={<ProfilePage />} />
+            {/* protectRoute para no tener que protegerla desde el componente Logout con un condicional*/}
+            <Route
+              path='/logout'
+              element={
+                <ProtectRoute>
+                  <Logout />
+                </ProtectRoute>
+              }
+            />
+            <Route
+              path='/profile'
+              element={
+                <ProtectRoute>
+                  <ProfilePage />
+
+                </ProtectRoute>
+              } />
+
 
             <Route path='*' element={<NotFoundPage />} />
 
